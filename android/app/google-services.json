@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1090656608021",
+    "firebase_url": "https://quiz-firstapp.firebaseio.com",
+    "project_id": "quiz-firstapp",
+    "storage_bucket": "quiz-firstapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090656608021:android:bd5670f048795865da531c",
+        "android_client_info": {
+          "package_name": "com.essame.quiz_firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090656608021-fs84j91lg5guu49mh9751m4qvoefikdv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdoHBHSIUSIg7z9zkkAiMvOPvyH4Riiok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090656608021-fs84j91lg5guu49mh9751m4qvoefikdv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
