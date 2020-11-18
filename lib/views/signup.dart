@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_firstapp/services/auth.dart';
-import 'package:quiz_firstapp/views/home.dart';
+import 'package:quiz_firstapp/views/oldhome.dart';
 import 'package:quiz_firstapp/views/signin.dart';
 import 'package:quiz_firstapp/widgets/widgets.dart';
 
@@ -94,6 +94,9 @@ class _SignUpState extends State<SignUp> {
                         signUp();
                       },
                       child: blueButton(context: context, label: "Sign Up"),
+                    ),
+                    SizedBox(
+                      height: 18,
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 24),

@@ -47,3 +47,19 @@ Widget redButton({BuildContext context, String label, buttonWidth}) {
     ),
   );
 }
+
+Widget indigoButton({BuildContext context, String label, buttonWidth}) {
+  return Container(
+    padding: EdgeInsets.symmetric(vertical: 16),
+    decoration: BoxDecoration(
+        color: Colors.indigo, borderRadius: BorderRadius.circular(30)),
+    alignment: Alignment.center,
+    width: buttonWidth != null
+        ? buttonWidth
+        : MediaQuery.of(context).size.width - 40,
+    child: Text(
+      label,
+      style: TextStyle(color: Colors.white, fontSize: 16),
+    ),
+  );
+}

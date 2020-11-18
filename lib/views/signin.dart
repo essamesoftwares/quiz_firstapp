@@ -37,7 +37,7 @@ class _SignInState extends State<SignIn> {
 
   google() async {
     await authService.googleSignIn().whenComplete(() {
-      // Helperfunctions.saveUserLoggedInDetails(isLoggedin: true);
+      Helperfunctions.saveUserLoggedInDetails(isLoggedin: true);
       Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
     });
   }
@@ -94,16 +94,36 @@ class _SignInState extends State<SignIn> {
                       // facebook button
                       child: blueButton(context: context, label: "Sign In"),
                     ),
-                    SizedBox(
-                      height: 18,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        google();
-                      },
-                      //google button
-                      // facebook button
-                      child: redButton(context: context, label: "Google"),
+                    SizedBox(height: 24),
+                    Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            google();
+                          },
+                          //google button
+                          // facebook button
+                          child: redButton(
+                              context: context,
+                              label: "Google",
+                              buttonWidth:
+                                  MediaQuery.of(context).size.width / 2 - 25),
+                        ),
+                        SizedBox(height: 24),
+                        GestureDetector(
+                          onTap: () {
+                            google();
+                          },
+                          child: indigoButton(
+                              context: context,
+                              label: "FaceBook",
+                              buttonWidth:
+                                  MediaQuery.of(context).size.width / 2 - 25),
+                        ),
+                        SizedBox(
+                          height: 18,
+                        ),
+                      ],
                     ),
                     SizedBox(
                       height: 18,

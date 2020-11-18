@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_firstapp/helper/functions.dart';
-import 'package:quiz_firstapp/views/home.dart';
+import 'package:quiz_firstapp/views/oldhome.dart';
 import 'package:quiz_firstapp/views/signin.dart';
 
 void main() {

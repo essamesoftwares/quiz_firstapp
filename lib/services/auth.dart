@@ -41,7 +41,7 @@ class AuthService {
           accessToken: auth.accessToken, idToken: auth.idToken);
 
       // Logging In....
-      FirebaseAuth.instance.signInWithCredential(credential);
+      return await FirebaseAuth.instance.signInWithCredential(credential);
     } catch (e) {
       print(e.toString());
     }
