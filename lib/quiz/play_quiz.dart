@@ -85,11 +85,6 @@ class _PlayQuizState extends State<PlayQuiz> {
         iconTheme: IconThemeData(color: Colors.black54),
         brightness: Brightness.light,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-        items: [],
-      ),
       body: Container(
         child: SingleChildScrollView(
           child: Column(

@@ -71,15 +71,15 @@ class QuizTimer extends StatefulWidget {
   _QuizTimerState createState() => _QuizTimerState();
 }
 
-int timer = 60;
-String showTimer = "60";
-
 class _QuizTimerState extends State<QuizTimer> {
   @override
   void initState() {
     startTimer();
     super.initState();
   }
+
+  int timer = 60;
+  String showTimer = "60";
 
   void startTimer() async {
     const oneSec = Duration(seconds: 1);
@@ -107,7 +107,7 @@ class _QuizTimerState extends State<QuizTimer> {
   }
 }
 
-Widget bottomNavigationBar(BuildContext context) {
+Widget quizTimer(BuildContext context) {
   return Text(
     showTimer,
     style: TextStyle(
