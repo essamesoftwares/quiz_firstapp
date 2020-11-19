@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 Widget appBar(BuildContext context) {
@@ -60,6 +62,57 @@ Widget indigoButton({BuildContext context, String label, buttonWidth}) {
     child: Text(
       label,
       style: TextStyle(color: Colors.white, fontSize: 16),
+    ),
+  );
+}
+
+class QuizTimer extends StatefulWidget {
+  @override
+  _QuizTimerState createState() => _QuizTimerState();
+}
+
+int timer = 60;
+String showTimer = "60";
+
+class _QuizTimerState extends State<QuizTimer> {
+  @override
+  void initState() {
+    startTimer();
+    super.initState();
+  }
+
+  void startTimer() async {
+    const oneSec = Duration(seconds: 1);
+    Timer.periodic(oneSec, (Timer t) {
+      setState(() {
+        if (timer < 1) {
+          t.cancel();
+          // MaterialPageRoute(
+          //     builder: (context) => Results(
+          //           correct: _correct,
+          //           incorrect: _incorrect,
+          //           total: total,
+          //         ));
+        } else {
+          timer = timer - 1;
+        }
+        showTimer = timer.toString();
+      });
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+Widget bottomNavigationBar(BuildContext context) {
+  return Text(
+    showTimer,
+    style: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 48,
     ),
   );
 }
